@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <body>
+    <a href="/">INDEX</a>
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+            <p>Name = {{ post.Name }}</p>
+            <p>Address = {{ post.Address }}</p>
+            <p>RollNo ={{ post.RollNo }}</p>
+            <p>Maths ={{ post.Maths }}</p>
+            <p>Physics  ={{ post.Physics }}</p>
+            <p>Chemistry  ={{ post.Chemistry }}</p>
+    </div>
+    <p><a href="{% url 'post_edit' pk=post.pk %}">Edit</a></p>
+    <p><a href="{% url 'post_remove' pk=post.pk %}">Delete</a></p>
+    
+ </body>
+</html>
+
